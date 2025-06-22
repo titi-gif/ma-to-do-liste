@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Calendrier des Tâches</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 10px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .day {
+      border: 1px solid #ccc;
+      padding: 10px;
+      cursor: pointer;
+      background-color: #f9f9f9;
+      min-height: 80px;
+    }
+    .day:hover {
+      background-color: #eaeaea;
+    }
+    #taches-jour {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>📆 Calendrier des Tâches</h1>
+  <a href="taches.html" id="retour-taches" style="position: absolute; top: 10px; left: 10px; font-size: 24px; text-decoration: none;">❌</a>
+
+  <div id="mois-annee" style="text-align: center; font-size: 1.2em; margin-bottom: 10px;"></div>
+  <div class="calendar" id="calendrier"></div>
+  <div id="taches-jour"></div>
+
+  <script src="calendrier.js"></script>
+</body>
+</html>
